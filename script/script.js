@@ -58,8 +58,8 @@ todoControl.addEventListener('submit', function(event){
         value : headerInput.value,
         completed: false
     };
-
-    todoData.push(newTodo);
+    localStorage.setItem(newTodo.value,newTodo.completed);
+    // todoData.push(newTodo);
     render();
     headerInput.value = '';
 });
